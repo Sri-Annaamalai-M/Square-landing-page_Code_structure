@@ -357,8 +357,20 @@ const Home = () => {
       </div>
       
       {/* Lock Component */}
-      <div className='mx-auto'>
-        <Lock/>
+      <div className='mx-auto py-0'>
+        <style dangerouslySetInnerHTML={{__html: `
+          @media (min-width: 1400px) and (max-width: 1700px) and (max-height: 950px) {
+            .lock-container-1600x900 {
+              padding-top: 0 !important;
+              padding-bottom: 0 !important;
+              margin-top: 0 !important;
+              margin-bottom: 0 !important;
+            }
+          }
+        `}} />
+        <div className="lock-container-1600x900">
+          <Lock/>
+        </div>
       </div>
       
       {/* Use Cases Section */}
@@ -481,8 +493,7 @@ const Home = () => {
       </div>
       
       {/* Solutions Section */}
-      <div className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-gray-50/50 px-4 xs:px-5 sm:px-6 lg:px-8">
-        <div className="max-w-[320px] xs:max-w-[375px] sm:max-w-[425px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] mx-auto">
+      <div className="max-w-[320px] xs:max-w-[375px] sm:max-w-[425px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] mx-auto">
           <div className="mb-6 xs:mb-8 sm:mb-12">
             <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-sora font-semibold leading-tight">
               <span className="text-[#064ee3]">Beyond Code. <br /></span>
@@ -554,7 +565,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };
