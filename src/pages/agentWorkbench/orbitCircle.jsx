@@ -1,57 +1,61 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+// import { useNavigate } from 'react-router-dom'; // Currently unused but kept for future use
 import { OrbitingCircles } from '../../components/ui/Orbiting-circles'
 import LoginModal from '../../components/LoginDialog';
 
 const OrbitCircle = () => {
+    // const navigate = useNavigate(); // Currently unused but kept for future use
+    const [isLoginOpen, setIsLoginOpen] = useState(false);
+    // const [index, setIndex] = useState(0); // Currently unused but kept for future use
 
-      const [isLoginOpen, setIsLoginOpen] = useState(false);
+    // Currently unused but kept for future navigation functionality
+    // const phrases = [
+    //     "To The Vibrant Life At SNS",
+    //     "To 1500+ Foundation Agents",
+    //     "To Use Cases That Matters"
+    // ];
 
-    const phrases = [
-        "To The Vibrant Life At SNS",
-        "To 1500+ Foundation Agents",
-        "To Use Cases That Matters"
-    ];
+    // Navigation mapping for each phrase (currently unused but kept for future use)
+    // const phraseNavigation = [
+    //     {
+    //         phrase: "To The Vibrant Life At SNS",
+    //         route: "/life-at-sns",
+    //         buttonText: "Explore Our Culture"
+    //     },
+    //     {
+    //         phrase: "To 1500+ Foundation Agents",
+    //         route: "/agent-workbench",
+    //         buttonText: "Explore Agent Workbench"
+    //     },
+    //     {
+    //         phrase: "To Use Cases That Matters",
+    //         route: "/usecase",
+    //         buttonText: "Explore Use Cases"
+    //     }
+    // ];
 
-    // Navigation mapping for each phrase
-    const phraseNavigation = [
-        {
-            phrase: "To The Vibrant Life At SNS",
-            route: "/life-at-sns",
-            buttonText: "Explore Our Culture"
-        },
-        {
-            phrase: "To 1500+ Foundation Agents",
-            route: "/agent-workbench",
-            buttonText: "Explore Agent Workbench"
-        },
-        {
-            phrase: "To Use Cases That Matters",
-            route: "/usecase",
-            buttonText: "Explore Use Cases"
-        }
-    ];
-
-    const images = [
-        "/images/IMG_6488.png",
-        "/images/agent_work_bench_1.jpg",
-        "/images/usecase_1.jpg",
-        "/images/IMG_6533.png",
-        "/images/agent_work_bench_2.jpg",
-        "/images/usecase_2.jpg",
-        "/images/IMG_6534.png",
-        "/images/agent_work_bench_1.jpg",
-        "/images/usecase_1.jpg",
-        "/images/IMG_6535.png",
-        "/images/agent_work_bench_2.jpg",
-        "/images/usecase_2.jpg",
-        "/images/IMG_6586.png",
-        "/images/agent_work_bench_1.jpg",
-        "/images/usecase_1.jpg",
-        "/images/IMG_6676.png",
-        "/images/agent_work_bench_2.jpg",
-        "/images/usecase_2.jpg",
-        "/images/IMG_7778.png"
-    ];
+    // Currently unused but kept for future functionality
+    // const images = [
+    //     "/images/IMG_6488.png",
+    //     "/images/agent_work_bench_1.jpg",
+    //     "/images/usecase_1.jpg",
+    //     "/images/IMG_6533.png",
+    //     "/images/agent_work_bench_2.jpg",
+    //     "/images/usecase_2.jpg",
+    //     "/images/IMG_6534.png",
+    //     "/images/agent_work_bench_1.jpg",
+    //     "/images/usecase_1.jpg",
+    //     "/images/IMG_6535.png",
+    //     "/images/agent_work_bench_2.jpg",
+    //     "/images/usecase_2.jpg",
+    //     "/images/IMG_6586.png",
+    //     "/images/agent_work_bench_1.jpg",
+    //     "/images/usecase_1.jpg",
+    //     "/images/IMG_6676.png",
+    //     "/images/agent_work_bench_2.jpg",
+    //     "/images/usecase_2.jpg",
+    //     "/images/IMG_7778.png"
+    // ];
 
     // Dynamic content for each button type
     const agentContent = {
@@ -106,7 +110,7 @@ const OrbitCircle = () => {
                 }
             ]
         },
-        'Industry Agents': {
+        'Industry Solutions': {
             centerTitle: 'Industry Solutions',
             centerSubtitle: 'Specialized Solutions for Every Sector',
             items: [
@@ -162,7 +166,7 @@ const OrbitCircle = () => {
                 }
             ]
         },
-        'Consumer Agents': {
+        'Consumer Solutions': {
             centerTitle: 'Consumer Solutions',
             centerSubtitle: 'Personal AI Assistants for Everyone',
             items: [
@@ -211,29 +215,29 @@ const OrbitCircle = () => {
     };
 
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prev) => (prev + 1) % images.length);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setIndex((prev) => (prev + 1) % images.length);
+    //     }, 3000);
+    //     return () => clearInterval(interval);
+    // }, [images.length]); // Currently unused but kept for future use
 
-    // Get current navigation info based on the phrase
-    const getCurrentNavigation = () => {
-        const currentPhraseIndex = index % phrases.length;
-        return phraseNavigation[currentPhraseIndex];
-    };
+    // Get current navigation info based on the phrase (currently unused but kept for future use)
+    // const getCurrentNavigation = () => {
+    //     const currentPhraseIndex = index % phrases.length;
+    //     return phraseNavigation[currentPhraseIndex];
+    // };
 
-    // Handle navigation based on current phrase
-    const handleNavigation = () => {
-        const currentNav = getCurrentNavigation();
-        navigate(currentNav.route);
-    };
+    // Handle navigation based on current phrase (currently unused but kept for future use)
+    // const handleNavigation = () => {
+    //     const currentNav = getCurrentNavigation();
+    //     navigate(currentNav.route);
+    // };
 
-    // Handle phrase click navigation
-    const handlePhraseClick = () => {
-        handleNavigation();
-    };
+    // Handle phrase click navigation (currently unused but kept for future use)
+    // const handlePhraseClick = () => {
+    //     handleNavigation();
+    // };
 
     // Get items without repetition but with consistent spacing
     const getNonRepeatingItems = () => {
@@ -282,7 +286,7 @@ const OrbitCircle = () => {
                                 }`}
                             onClick={() => setActiveButton('Industry Solutions')}
                         >
-                            Industrial Solutions
+                            Industry Solutions
                         </button>
                     </div>
                     <div>
