@@ -107,7 +107,7 @@ const OrbitCircle = () => {
             ]
         },
         'Industry Agents': {
-            centerTitle: 'Industry Agents',
+            centerTitle: 'Industry Solutions',
             centerSubtitle: 'Specialized Solutions for Every Sector',
             items: [
                 {
@@ -163,7 +163,7 @@ const OrbitCircle = () => {
             ]
         },
         'Consumer Agents': {
-            centerTitle: 'Consumer Agents',
+            centerTitle: 'Consumer Solutions',
             centerSubtitle: 'Personal AI Assistants for Everyone',
             items: [
                 {
@@ -276,24 +276,24 @@ const OrbitCircle = () => {
                     </div>
                     <div>
                         <button
-                            className={`font-semibold py-2 px-4 rounded-full shadow hover:shadow-lg transition ${activeButton === 'Industry Agents'
+                            className={`font-semibold py-2 px-4 rounded-full shadow hover:shadow-lg transition ${activeButton === 'Industry Solutions'
                                 ? 'bg-[#064EE3] text-white border-2 border-blue-900'
                                 : 'bg-white text-blue-900 border-2 border-transparent hover:border-blue-300'
                                 }`}
-                            onClick={() => setActiveButton('Industry Agents')}
+                            onClick={() => setActiveButton('Industry Solutions')}
                         >
-                            Industry Agents
+                            Industrial Solutions
                         </button>
                     </div>
                     <div>
                         <button
-                            className={`font-semibold py-2 px-4 rounded-full shadow hover:shadow-lg transition ${activeButton === 'Consumer Agents'
+                            className={`font-semibold py-2 px-4 rounded-full shadow hover:shadow-lg transition ${activeButton === 'Consumer Solutions'
                                 ? 'bg-[#064EE3] text-white border-2 border-blue-900'
                                 : 'bg-white text-blue-900 border-2 border-transparent hover:border-blue-300'
                                 }`}
-                            onClick={() => setActiveButton('Consumer Agents')}
+                            onClick={() => setActiveButton('Consumer Solutions')}
                         >
-                            Consumer Agents
+                            Consumer Solutions
                         </button>
                     </div>
                 </div>

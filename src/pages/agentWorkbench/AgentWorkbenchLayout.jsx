@@ -31,7 +31,7 @@ useEffect(() => {
         setSelected("Industry-Specific Agents")
     }
 }, [category]);
-  const options = ["Foundation Agents", "Industry-Specific Agents", "Consumer Agents"];
+  const options = ["Foundation Agents", "Industry", "Consumer Agents"];
   return (
     <div className="min-h-screen w-full items-center flex flex-col">
       {/* Common Sidebar */}

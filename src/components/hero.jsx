@@ -4,7 +4,7 @@ export default function Hero() {
       aria-labelledby="hero-heading" 
       className="relative bg-gradient-to-b from-[#EEF4FF] to-white w-screen"
       style={{
-        backgroundImage: `url('/images/bg-hero.png')`,
+        backgroundImage: `url('/images/HomeHero.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"

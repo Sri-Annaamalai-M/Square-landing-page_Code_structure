@@ -86,10 +86,10 @@ const Home = () => {
         
         {/* Hero Content */}
         <section className="w-full bg-[linear-gradient(359deg,#ffffff_0%,_#e3ebff_100%)] relative">
-          <div 
-            className="w-full h-[500px] xs:h-[550px] sm:h-[600px] md:h-[650px] lg:h-[700px] xl:h-[750px] 2xl:h-[802px] bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/HomeHero.png')" }}
-          >
+            <div 
+              className="w-full h-[500px] xs:h-[550px] sm:h-[600px] md:h-[650px] lg:h-[700px] xl:h-[750px] 2xl:h-[802px] bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: "url('/images/HomeHero.png')" }}
+            >
             <div className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] 2xl:max-w-[1300px] mx-auto px-3 xs:px-4 sm:px-5 lg:px-8 h-full">
               
               {/* Mobile Layout (< 768px) - Stacked Vertically */}

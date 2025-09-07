@@ -117,40 +117,52 @@ export const UseCase = () => {
 
   return (
     <div className="bg-white min-h-screen w-full">
-      <div className="relative overflow-hidden">
+      {/* Hero Section - Full Width */}
+      <div className="relative w-full h-auto min-h-[300px] md:min-h-[440px] overflow-hidden pt-20">
+        {/* Background Pattern */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{ backgroundImage: "url('/images/img_67c0570ea854203522bca87aherobgpatternavif.png')" }}
+        />
+        
         {/* Background blur effect */}
         <div className="absolute w-[300px] h-[300px] md:w-[470px] md:h-[470px] top-0 left-1/2 transform -translate-x-1/2 md:left-[485px] md:transform-none bg-[#1357e591] rounded-full blur-[400px]" />
-
-        <div className="flex flex-col items-center gap-10 md:gap-20 px-4 md:px-8 lg:px-16">
-          {/* Hero Section */}
-          <div
-            className="relative w-full h-[300px] md:h-[440px] bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage:
-                "url(/images/usecase_hero_frame.png)",
-            }}
+        
+        {/* Hero Content */}
+        <section className="w-full bg-[linear-gradient(359deg,#ffffff_0%,_#e3ebff_100%)] relative">
+          <div 
+            className="w-full h-[300px] md:h-[440px] bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/HomeHero.png')" }}
           >
-            {/* Decorative border element */}
-            <div className="absolute w-[60px]  h-[60px] md:w-[88px] md:h-[83px] top-[40px] left-[20px] md:top-[84px] md:left-[39px] border-2 border-solid border-transparent shadow-[inset_-5px_-5px_250px_#ffffff05] backdrop-blur-[21px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(21px)_brightness(100%)] [border-image:linear-gradient(169deg,rgba(255,255,255,0.4)_0%,rgba(238,237,237,0.2)_100%)_1] [background:radial-gradient(50%_50%_at_0%_0%,rgba(255,255,255,0.4)_0%,rgba(255,255,255,0)_100%)]" />
+            <div className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] 2xl:max-w-[1300px] mx-auto px-3 xs:px-4 sm:px-5 lg:px-8 h-full">
+              
+              {/* Decorative border element */}
+              <div className="absolute w-[60px] h-[60px] md:w-[88px] md:h-[83px] top-[40px] left-[20px] md:top-[84px] md:left-[39px] border-2 border-solid border-transparent shadow-[inset_-5px_-5px_250px_#ffffff05] backdrop-blur-[21px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(21px)_brightness(100%)] [border-image:linear-gradient(169deg,rgba(255,255,255,0.4)_0%,rgba(238,237,237,0.2)_100%)_1] [background:radial-gradient(50%_50%_at_0%_0%,rgba(255,255,255,0.4)_0%,rgba(255,255,255,0)_100%)]" />
 
-            <div className="flex flex-col items-center mt-36 justify-center gap-6 md:gap-[55px] absolute inset-0 px-4 md:px-8">
-              <div className="text-center max-w-6xl">
-                <h1 className="text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-Manrope font-semibold leading-[40px] sm:leading-[56px] md:leading-[72px] lg:leading-[80px] text-center text-global-1 w-full">
-                  <span className="text-global-1">Partnered Progress</span>
-                  <span className="text-global-1 lg:text-[50px]"> : </span>
-                  <span className="text-global-5 text-[#064EE3]">
-                    Agentic AI
-                  </span>
-                  <br />
-                  <span className="text-global-1">
-                    Solution for Every Sector
-                  </span>
-                </h1>
+              {/* Content Container */}
+              <div className="flex flex-col justify-center items-center h-full text-center">
+                <div className="max-w-6xl">
+                  <h1 className="text-[32px] sm:text-[48px] md:text-[54px] lg:text-[54px] font-Manrope font-[700] leading-[40px] sm:leading-[56px] md:leading-[72px] lg:leading-[80px] text-center text-global-1 w-full">
+                    <span className="text-global-1">Partnered Progress</span>
+                    <span className="text-global-1 lg:text-[50px]"> : </span>
+                    <span className="text-global-5 text-[#064EE3]">
+                      Agentic AI
+                    </span>
+                    <br />
+                    <span className="text-global-1">
+                      Solution for Every Sector
+                    </span>
+                  </h1>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+      </div>
 
-          {/* Main Content */}
+      {/* Main Content */}
+      <div className="relative overflow-hidden">
+        <div className="flex flex-col items-center gap-10 md:gap-20 px-4 md:px-8 lg:px-16 py-8 md:py-12 lg:py-16">
           <div className="flex flex-col lg:flex-row w-full max-w-7xl items-start gap-6 lg:gap-6">
             {/* Category Filters */}
             <div className="flex flex-col w-full lg:w-72 items-start gap-4 mb-10 ">
