@@ -23,7 +23,7 @@ if(option==="Foundation Agents") {
   navigate(`/agent-workbench/${slug}`, { state: { type: option.label } });
 };
 
-useEffect(() => {
+useEffect(() => { 
     if(category==="foundation-agents") {
         setSelected("Foundation Agents")
     }
@@ -31,7 +31,7 @@ useEffect(() => {
         setSelected("Industry-Specific Agents")
     }
 }, [category]);
-  const options = ["Foundation Agents", "Industry", "Consumer Agents"];
+  const options = ["Foundation Agents", "Industry", "Customer Agents"];
   return (
     <div className="min-h-screen w-full items-center flex flex-col">
       {/* Common Sidebar */}

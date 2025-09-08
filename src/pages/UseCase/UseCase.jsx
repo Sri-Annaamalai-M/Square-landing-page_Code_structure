@@ -1,6 +1,6 @@
 import React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 // import CTASection from "../Home/CTASection";
 import useCaseData from "../../data/usecase.json";
 import UseCaseCard from "../../components/UseCaseCard";
@@ -11,6 +11,7 @@ export const UseCase = () => {
   const [activeCategory, setActiveCategory] = useState("supply-chain");
   const [showAllUseCases, setShowAllUseCases] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   // Dynamic data mapping
   const dataMapping = {
@@ -65,6 +66,16 @@ export const UseCase = () => {
       },
     },
   };
+
+  // Handle URL parameters to set active category
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const categoryParam = searchParams.get('category');
+    
+    if (categoryParam && dataMapping[categoryParam]) {
+      setActiveCategory(categoryParam);
+    }
+  }, [location.search]);
 
   // Extract category filters dynamically from the data mapping
   const getCategoryFilters = () => {
@@ -237,7 +248,7 @@ export const UseCase = () => {
                 </div>
               ) : (
                 <>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full">
                     {useCasesToDisplay.map((useCase) => (
                       <UseCaseCard
                         key={useCase.id}

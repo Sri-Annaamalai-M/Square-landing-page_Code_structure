@@ -166,8 +166,8 @@ const OrbitCircle = () => {
                 }
             ]
         },
-        'Consumer Solutions': {
-            centerTitle: 'Consumer Solutions',
+        'Customer Solutions': {
+            centerTitle: 'Customer Solutions',
             centerSubtitle: 'Personal AI Assistants for Everyone',
             items: [
                 {
@@ -291,13 +291,13 @@ const OrbitCircle = () => {
                     </div>
                     <div>
                         <button
-                            className={`font-semibold py-2 px-4 rounded-full shadow hover:shadow-lg transition ${activeButton === 'Consumer Solutions'
+                            className={`font-semibold py-2 px-4 rounded-full shadow hover:shadow-lg transition ${activeButton === 'Customer Solutions'
                                 ? 'bg-[#064EE3] text-white border-2 border-blue-900'
                                 : 'bg-white text-blue-900 border-2 border-transparent hover:border-blue-300'
                                 }`}
-                            onClick={() => setActiveButton('Consumer Solutions')}
+                            onClick={() => setActiveButton('Customer Solutions')}
                         >
-                            Consumer Solutions
+                            Customer Solutions
                         </button>
                     </div>
                 </div>

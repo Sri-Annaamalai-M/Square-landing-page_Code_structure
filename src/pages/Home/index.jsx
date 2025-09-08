@@ -155,10 +155,10 @@ const Home = () => {
                           src={images[index]} 
                           alt="Hero related visual"
                           className="w-full h-[160px] xs:h-[190px] sm:h-[220px] object-cover"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.6 }}
+                          initial={{ x: "100%" }}
+                          animate={{ x: "0%" }}
+                          exit={{ x: "-100%" }}
+                          transition={{ duration: 0.6, ease: "easeInOut" }}
                         />
                       </AnimatePresence>
                       {/* Overlay Content */}
@@ -253,13 +253,12 @@ const Home = () => {
                           alt="Hero related visual"
                           className="w-full h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[525px] object-cover"
                           style={{ 
-                            borderRadius: '32px',
-                            opacity: 1 
+                            borderRadius: '32px'
                           }}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.6 }}
+                          initial={{ x: "100%" }}
+                          animate={{ x: "0%" }}
+                          exit={{ x: "-100%" }}
+                          transition={{ duration: 0.6, ease: "easeInOut" }}
                         />
                       </AnimatePresence>
                       {/* Overlay Content */}
@@ -404,7 +403,7 @@ const Home = () => {
               {/* Use Cases Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 lg:gap-8 mb-6 xs:mb-8 sm:mb-12 lg:mb-16">
                 {/* IT Development Lifecycle Card */}
-                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-all duration-300 relative group">
                   <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
                     <img src="/images/img_background_blue_800.svg" alt="IT Development" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                   </div>
@@ -414,62 +413,93 @@ const Home = () => {
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
                     Seamless, smart, and scalable Agentic AI powers the future of IT.
                   </p>
-                  <div className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-colors">
+                  <div 
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+                    onClick={() => navigate("/usecase?category=information-technology")}
+                  >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
                     <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2" />
                   </div>
                 </div>
                 
                 {/* Supply Chain Card */}
-                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-all duration-300 relative group">
                   <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
                     <img src="/images/img_frame.svg" alt="Supply Chain" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                   </div>
                   <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
                     Supply Chain
                   </h3>
-                  <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80">
+                  <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
                     From demand to delivery, every link learns, decides, and acts in real time
                   </p>
+                  <div 
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+                    onClick={() => navigate("/usecase?category=supply-chain")}
+                  >
+                    <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2" />
+                  </div>
                 </div>
                 
                 {/* Healthcare Card */}
-                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-all duration-300 relative group">
                   <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
                     <img src="/images/img_frame_blue_800.svg" alt="Healthcare" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                   </div>
                   <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
                     Healthcare
                   </h3>
-                  <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80">
+                  <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
                     Partnering with hospitals to provide intelligent, personalized, and always-available healthcare solutions.
                   </p>
+                  <div 
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+                    onClick={() => navigate("/usecase?category=healthcare")}
+                  >
+                    <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2" />
+                  </div>
                 </div>
                 
                 {/* Insurance Card */}
-                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-all duration-300 relative group">
                   <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
                     <img src="/images/img_frame_blue_800_60x60.svg" alt="Insurance" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                   </div>
                   <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
                     Insurance
                   </h3>
-                  <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80">
+                  <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
                     40% faster bookings, predictive demand management, and personalised guest experiences.
                   </p>
+                  <div 
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+                    onClick={() => navigate("/usecase?category=insurance")}
+                  >
+                    <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2" />
+                  </div>
                 </div>
                 
                 {/* Human Resource Card */}
-                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-all duration-300 relative group">
                   <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
                     <img src="/images/img_frame_60x60.svg" alt="Human Resource" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                   </div>
                   <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
                     Human Resource
                   </h3>
-                  <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80">
+                  <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
                     3× higher conversions using recommendation engines and customer intelligence.
                   </p>
+                  <div 
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+                    onClick={() => navigate("/usecase?category=human-resource")}
+                  >
+                    <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2" />
+                  </div>
                 </div>
                 
                 {/* Call to Action Card */}
