@@ -245,7 +245,7 @@ export default function UseCaseDetail() {
 
     return (
         <div 
-            className="min-h-screen mt-20  font-sans text-gray-800"
+            className="min-h-screen mt-20   text-gray-800"
             style={{
                  background: 'linear-gradient(180deg, #aab6e240 0px, #c2cce730 100px, #ffffffff 200px)'
             }}
@@ -295,7 +295,7 @@ export default function UseCaseDetail() {
                                     ? 'opacity-100 translate-y-0' 
                                     : 'opacity-0 translate-y-8'
                             }`}>
-                                <p className="text-xs sm:text-xs font-semibold px-2 sm:px-2 text-black tracking-wider mb-2 sm:mb-3 bg-[#C5EDE0] rounded-full py-1 w-fit font-family-Sora">
+                                <p className="text-xs sm:text-xs font-semibold px-2 sm:px-2 text-black tracking-wider mb-2 sm:mb-3 bg-[#C5EDE0] rounded-full py-1 w-fit">
                                     {useCaseData.category} Use Case
                                 </p>
                                 <h1 className="text-[42px] font-bold text-blue-600 leading-tight">

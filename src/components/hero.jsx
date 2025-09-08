@@ -14,13 +14,13 @@ export default function Hero() {
         <header className="text-center">
           <h1
             id="hero-heading"
-            className="text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-sora font-semibold leading-[40px] sm:leading-[56px] md:leading-[72px] lg:leading-[80px] text-center text-global-1 w-full mt-20"
+            className="text-[32px] sm:text-[48px] md:text-[56px] lg:text-[64px]  font-semibold leading-[40px] sm:leading-[56px] md:leading-[72px] lg:leading-[80px] text-center text-global-1 w-full mt-20"
           >
             A <span className="text-[#1E63FF]">Culture </span> that Erupts into <span className="text-[#1E63FF]">Brilliance.</span>
           </h1>
         </header>
 
-        <p className="mx-auto mt-6 sm:mt-8 lg:mt-10 max-w-5xl text-pretty text-center font-sans text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-black/90 font-medium px-4 sm:px-6 lg:px-0">
+        <p className="mx-auto mt-6 sm:mt-8 lg:mt-10 max-w-5xl text-pretty text-center  text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-black/90 font-medium px-4 sm:px-6 lg:px-0">
           We are a culture of bold thinkers and fearless doers. Here, boundaries fade, routines transform into freedom, and creativity flows without limits. 
         </p>
 

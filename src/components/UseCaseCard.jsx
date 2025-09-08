@@ -85,7 +85,7 @@ const UseCaseCard = ({ useCase, onLearnMore }) => {
 
         <div className="flex flex-col w-full items-start gap-4 md:gap-[18px]">
           <div className="flex flex-col items-start gap-3 w-full">
-            <div className="font-sora font-semibold text-black text-[22px] tracking-0 leading-normal">
+            <div className=" font-semibold text-black text-[22px] tracking-0 leading-normal">
               {useCase.title}
             </div>
 

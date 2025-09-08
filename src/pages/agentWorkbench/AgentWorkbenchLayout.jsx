@@ -43,7 +43,7 @@ useEffect(() => {
           <div className="w-full max-w-[1224px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-center">
             <div className="flex flex-col gap-[10px] sm:gap-[40px] md:gap-[54px] mt-40 justify-start items-center w-full text-center">
               {/* Main Heading */}
-              <h1 className="text-[32px] sm:text-[48px] md:text-[50px] lg:text-[60px] font-sora font-semibold leading-[40px] sm:leading-[56px] md:leading-[72px] lg:leading-[80px] text-center text-global-1 w-full">
+              <h1 className="text-[32px] sm:text-[48px] md:text-[50px] lg:text-[60px]  font-semibold leading-[40px] sm:leading-[56px] md:leading-[72px] lg:leading-[80px] text-center text-global-1 w-full">
                 <span className="text-global-1 font-manrope font-semi-bold mb-4"><span className="text-[#000000]">Agentic AI Marketplace</span></span><br />
 
                 <span className="text-global-1 font-manrope font-semi-bold">Explore <span className="text-[#1E63FF]">1500+ </span>Ready-to-Use AI Agents</span>

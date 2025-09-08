@@ -127,7 +127,7 @@ export default function Page() {
                     >
                       <div className="flex flex-col items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
                         <h2
-                          className={`relative self-stretch [font-family:'Sora',Helvetica] font-semibold text-black text-[32px] tracking-[0] leading-[40px]`}
+                          className={`relative self-stretch font-semibold text-black text-[32px] tracking-[0] leading-[40px]`}
                         >
                           {section.title.split("\n").map((line, lineIndex) => (
                             <React.Fragment key={lineIndex}>
@@ -137,7 +137,7 @@ export default function Page() {
                             </React.Fragment>
                           ))}
                         </h2>
-                        <p className="relative self-stretch [font-family:'Sora',Helvetica] font-normal text-[#000000] text-base tracking-[0] leading-[26px]">
+                        <p className="relative self-stretch font-normal text-[#000000] text-base tracking-[0] leading-[26px]">
                           {section.description
                             .split("\n")
                             .map((line, lineIndex) => (

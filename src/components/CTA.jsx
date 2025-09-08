@@ -19,12 +19,12 @@ const CTASection = () => {
           <div className="flex flex-col justify-center items-center w-full">
             <div className="flex flex-col justify-start items-center w-full lg:w-[74%] mt-8">
               {/* Main Heading */}
-              <h2 className="text-[32px] sm:text-[42px] md:text-[54px] font-sora font-semibold leading-[40px] sm:leading-[56px] md:leading-[69px] text-center text-global-7">
+              <h2 className="text-[32px] sm:text-[42px] md:text-[54px]  font-semibold leading-[40px] sm:leading-[56px] md:leading-[69px] text-center text-global-7">
                 Let's Build Your Agentic Future
               </h2>
 
               {/* Subtitle */}
-              <p className="text-[16px] sm:text-[18px] md:text-[20px] font-inter font-normal leading-[20px] sm:leading-[22px] md:leading-[24px] text-center text-global-7 w-full mt-6 sm:mt-8">
+              <p className="text-[16px] sm:text-[18px] md:text-[20px] font-normal leading-[20px] sm:leading-[22px] md:leading-[24px] text-center text-global-7 w-full mt-6 sm:mt-8">
                 Ready to transform your business with Agentic AI, autonomous solutions? Partner with us and take the first step into the Agentic era.
               </p>
 

@@ -73,10 +73,10 @@ const CategoriesAgents = () => {
                 />
               </div> */}
               <div className="flex flex-col gap-[3px] sm:gap-[6px] justify-start items-start flex-1">
-                <h3 className="text-[18px] sm:text-[22px] font-semibold leading-[23px] sm:leading-[28px] text-global-5 font-sora">
+                <h3 className="text-[18px] sm:text-[22px] font-semibold leading-[23px] sm:leading-[28px] text-global-5 ">
                   {headerTitle}
                 </h3>
-                <p className="text-[14px] sm:text-[16px] font-normal leading-[18px] sm:leading-[21px] text-global-5 font-sora">
+                <p className="text-[14px] sm:text-[16px] font-normal leading-[18px] sm:leading-[21px] text-global-5 ">
                   {headerDescription}
                 </p>
               </div>
@@ -121,7 +121,7 @@ const CategoriesAgents = () => {
                       <div className="flex flex-col justify-start items-start w-full ml-[6px] sm:ml-[12px]">
                         {/* Title and Read more in same row */}
                         <div className="flex flex-row justify-between items-center w-full mb-[6px] sm:mb-[12px]">
-                          <h4 className="text-[18px] sm:text-[22px] font-semibold leading-[23px] sm:leading-[28px] text-global-5 font-sora">
+                          <h4 className="text-[18px] sm:text-[22px] font-semibold leading-[23px] sm:leading-[28px] text-global-5 ">
                             {agent.name}
                           </h4>
                           <button 

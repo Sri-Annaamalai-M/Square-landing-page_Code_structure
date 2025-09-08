@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Button from '../../components/ui/Button';
 import Lock from './Lock';
+import FeatureCards from '../../components/FeatureCards';
 import { useNavigate as Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -26,6 +27,39 @@ const phraseNavigation = [
     phrase: "To Use Cases That Matters",
     route: "/usecase",
     buttonText: "Explore Use Cases"
+  }
+];
+
+// Feature Cards Data
+const featureCardsData = [
+  {
+    id: 1,
+    icon: "/images/Frame.svg",
+    title: "Born Agentic",
+    description: "Native to the era of autonomous AI.",
+    alt: "Born Agentic"
+  },
+  {
+    id: 2,
+    icon: "/images/Frame_2.svg",
+    title: "AI Engineering First",
+    titleBreak: true, // Indicates where to add <br /> 
+    description: "Strong foundation in AI, data, and automation.",
+    alt: "AI Engineering First"
+  },
+  {
+    id: 3,
+    icon: "/images/Frame_3.svg",
+    title: "Domain Versatility",
+    description: "Solutions that adapt across industries.",
+    alt: "Domain Versatility"
+  },
+  {
+    id: 4,
+    icon: "/images/Frame_4.svg",
+    title: "Outcome obsession",
+    description: "Designed to deliver real impact.",
+    alt: "Outcome Obsession"
   }
 ];
 
@@ -194,9 +228,9 @@ const Home = () => {
                 {/* Left Content Container - 60% */}
                 <div className="md:col-span-6 flex flex-col gap-[8px] lg:gap-[12px] justify-center text-center lg:text-left">
                   {/* Small Header */}
-                  <div className="text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] 2xl:text-[48px] font-manrope font-[800] text-global-1 whitespace-nowrap">
+                  <h2 className="text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] 2xl:text-[48px] font-manrope font-[800] text-global-1 whitespace-nowrap">
                     Agentic AI Breakthroughs
-                  </div>
+                  </h2>
                   
                   {/* Main Heading with Slide Animation */}
                   <h1 className="text-[20px] md:text-[24px] lg:text-[28px] xl:text-[36px] 2xl:text-[42px] font-manrope font-[600] leading-[24px] md:leading-[28px] lg:leading-[32px] xl:leading-[40px] 2xl:leading-[48px] text-global-1 h-[24px] md:h-[28px] lg:h-[32px] xl:h-[40px] 2xl:h-[48px] overflow-hidden whitespace-nowrap">
@@ -294,66 +328,7 @@ const Home = () => {
       </div>
       
       {/* Feature Cards Section */}
-      <div className="relative z-30 px-4 xs:px-5 sm:px-6 lg:px-8 py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative p-4 xs:p-5 sm:p-6 lg:p-12 xl:p-16 overflow-hidden rounded-xl lg:rounded-2xl" style={{ backgroundImage: "url('/images/Bgframe.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            {/* Feature Cards Grid */}
-            <div className="relative z-10 grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 lg:gap-8">
-              {/* Born Agentic Card */}
-              <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow h-auto sm:h-[240px] lg:h-[260px] flex flex-col">
-                <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center">
-                  <img src="/images/Frame.svg" alt="Born Agentic" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
-                </div>
-                <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-inter font-medium text-[#040404] mt-3">
-                  Born Agentic
-                </h3>
-                <p className="text-xs xs:text-sm sm:text-sm font-manrope font-medium text-gray-600 mt-3 sm:mt-auto mb-3 xs:mb-4 sm:mb-[20px]">
-                  Native to the era of autonomous AI.
-                </p>
-              </div>
-              
-              {/* AI Engineering First Card */}
-              <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow h-auto sm:h-[240px] lg:h-[260px] flex flex-col">
-                <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center">
-                  <img src="/images/Frame_2.svg" alt="AI Engineering First" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
-                </div>
-                <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-inter font-medium text-[#040404] mt-3">
-                  AI Engineering <br /> First
-                </h3>
-                <p className="text-xs xs:text-sm sm:text-sm font-manrope font-medium text-gray-600 mt-3 sm:mt-auto mb-3 xs:mb-4 sm:mb-[20px]">
-                  Strong foundation in AI, data, and automation.
-                </p>
-              </div>
-              
-              {/* Domain Versatility Card */}
-              <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow h-auto sm:h-[240px] lg:h-[260px] flex flex-col">
-                <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center">
-                  <img src="/images/Frame_3.svg" alt="Domain Versatility" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
-                </div>
-                <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-inter font-medium text-[#040404] mt-3">
-                  Domain Versatility
-                </h3>
-                <p className="text-xs xs:text-sm sm:text-sm font-manrope font-medium text-gray-600 mt-3 sm:mt-auto mb-3 xs:mb-4 sm:mb-[20px]">
-                  Solutions that adapt across industries.
-                </p>
-              </div>
-              
-              {/* Outcome Obsession Card */}
-              <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow h-auto sm:h-[240px] lg:h-[260px] flex flex-col">
-                <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center">
-                  <img src="/images/Frame_4.svg" alt="Outcome Obsession" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
-                </div>
-                <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-inter font-medium text-[#040404] mt-3">
-                  Outcome obsession
-                </h3>
-                <p className="text-xs xs:text-sm sm:text-sm font-manrope font-medium text-gray-600 mt-3 sm:mt-auto mb-3 xs:mb-4 sm:mb-[20px]">
-                  Designed to deliver real impact.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <FeatureCards cards={featureCardsData} />
       
       {/* Lock Component */}
       <div className='mx-auto py-0'>
@@ -407,7 +382,7 @@ const Home = () => {
                   <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
                     <img src="/images/img_background_blue_800.svg" alt="IT Development" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                   </div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl  font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
                     IT Development Lifecycle
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
@@ -427,7 +402,7 @@ const Home = () => {
                   <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
                     <img src="/images/img_frame.svg" alt="Supply Chain" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                   </div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl  font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
                     Supply Chain
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
@@ -447,7 +422,7 @@ const Home = () => {
                   <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
                     <img src="/images/img_frame_blue_800.svg" alt="Healthcare" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                   </div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl  font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
                     Healthcare
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
@@ -467,7 +442,7 @@ const Home = () => {
                   <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
                     <img src="/images/img_frame_blue_800_60x60.svg" alt="Insurance" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                   </div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
                     Insurance
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
@@ -487,7 +462,7 @@ const Home = () => {
                   <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
                     <img src="/images/img_frame_60x60.svg" alt="Human Resource" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                   </div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl  font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
                     Human Resource
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
@@ -525,7 +500,7 @@ const Home = () => {
       {/* Solutions Section */}
       <div className="max-w-[320px] xs:max-w-[375px] sm:max-w-[425px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] mx-auto">
           <div className="mb-6 xs:mb-8 sm:mb-12">
-            <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-sora font-semibold leading-tight">
+            <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl  font-semibold leading-tight">
               <span className="text-[#064ee3]">Beyond Code. <br /></span>
               <span className="text-[#242424]">Into impact with Agentic Solutions</span>
             </h2>
