@@ -72,8 +72,8 @@ const UseCaseCard = ({ useCase, onLearnMore }) => {
   };
 
   return (
-    <Card className="flex flex-col w-full max-w-[480px] mx-auto items-start p-4 md:p-5 bg-white rounded-3xl overflow-hidden shadow-[0px_2px_16px_#10182814] border-0">
-      <CardContent className="flex flex-col items-start gap-6 w-full p-0">
+    <Card className="group flex flex-col w-full max-w-[480px] mx-auto items-start p-4 md:p-5 bg-white rounded-3xl overflow-hidden shadow-[0px_2px_16px_#10182814] border-0 h-full hover:shadow-xl transition-shadow duration-300">
+      <CardContent className="flex flex-col items-start gap-6 w-full p-0 h-full">
         {useCase.image ? (
           <div
             className="w-full h-[150px] md:h-[197px] bg-[#e6edfc] rounded-3xl bg-cover bg-center"
@@ -83,16 +83,16 @@ const UseCaseCard = ({ useCase, onLearnMore }) => {
           <div className="w-full h-[150px] md:h-[197px] bg-[#e6edfc] rounded-3xl" />
         )}
 
-        <div className="flex flex-col w-full items-start gap-4 md:gap-[18px]">
+        <div className="flex flex-col w-full items-start gap-4 md:gap-[18px] flex-grow">
           <div className="flex flex-col items-start gap-3 w-full">
-            <div className=" font-semibold text-black text-[22px] tracking-0 leading-normal">
+            <h2 className=" font-semibold text-black text-[20px] tracking-0 leading-normal">
               {useCase.title}
-            </div>
+            </h2>
 
-            <div className="font-inter font-normal text-[#303030] text-[22px] tracking-0 leading-normal">
-              <div className={`${isExpanded ? '' : 'line-clamp-3'} transition-all duration-300`}>
+            <div className="font-inter font-normal text-[#303030] text-[14px] tracking-0 leading-normal">
+              <p className={`${isExpanded ? '' : 'line-clamp-3'} transition-all duration-300`}>
                 {useCase.tagline}
-              </div>
+              </p>
               {useCase.tagline && useCase.tagline.length > 120 && (
                 <button
                   onClick={toggleExpanded}
@@ -103,13 +103,17 @@ const UseCaseCard = ({ useCase, onLearnMore }) => {
               )}
             </div>
           </div>
+        </div>
 
+        {/* Learn More Button - Now at bottom */}
+        <div className="w-full mt-auto">
           <Button
             variant="link"
             onClick={() => onLearnMore(useCase.id)}
-            className="font-inter font-normal text-[#3e57da] text-base md:text-[22px] tracking-0 leading-normal p-0 h-auto justify-start"
+            className="font-inter font-normal text-[#3e57da] text-base md:text-[16px] tracking-0 leading-normal p-0 h-auto justify-start opacity-0 transition-all duration-300 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 no-underline hover:no-underline cursor-pointer"
           >
             Learn More
+            <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-2 h-2 xs:w-3 xs:h-3 sm:w-5 sm:h-5" />
           </Button>
         </div>
       </CardContent>
